@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <form action="#" method="GET">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <!-- Nombre -->
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" required>
+            <!-- Edad -->
+            <label for="edad">Edad</label>
+            <input type="number" name="edad" id="edad">
+        </fieldset>
+        <fieldset>
+            <legend>Datos de usuario</legend>
+            <!--Correo electronico-->
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" id="email" required>
+            <!-- Contraseña -->
+            <label for="password">Contraseña</label>
+            <input type="password" name="password">
+        </fieldset>
+        <fieldset>
+            <legend>Preferencias</legend>
+            <p>Género:</p>
+            <input type="radio" id="masc" name="genero" value="M">
+            <label for="masc">Masculino</label>
+            <input type="radio" id="fem" name="genero" value="F">
+            <label for="fem">Femenino</label>
+            <p>Intereses:</p>
+            <input type="checkbox" id="deporte" name="intereses[]" value="deporte">
+            <label for="deporte">Deporte</label>
+            <input type="checkbox" id="musica" name="intereses[]" value="musica">
+            <label for="musica">Música</label>
+        </fieldset>
+        <button type="submit">Crear cuenta</button>
+    </form>
+</body>
+<!--
+**Puntos para destacar en clase:**
+- `for` del `<label>` coincide con el `id` del campo → accesibilidad y clic en el foco.
+- `<fieldset>` + `<legend>` agrupan visualmente campos relacionados.
+- Los atributos `required`, `minlength`, `pattern`, `min`, `max` son validación **HTML5**, del lado del cliente.
+- `intereses[]` (con corchetes) permite que PHP reciba varios checkboxes como un array.
+-->
+</html>
